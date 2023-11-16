@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Planner</title>
+    <style>
+        /* Add your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Route Planner</h1>
+    
+    <div>
+        <label for="start">Start Location:</label>
+        <input type="text" id="start" placeholder="Enter start location">
+    </div>
+    
+    <div>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination">
+    </div>
+    
+    <button onclick="planRoute()">Plan Route</button>
+
+    <div id="map"></div>
+
+    <script>
+        // Add your JavaScript logic here
+        function planRoute() {
+            var startLocation = document.getElementById('start').value;
+            var destination = document.getElementById('destination').value;
+
+            // You can use a mapping API (like Google Maps) to plan the route and display it on the map
+            // For simplicity, let's just display the locations for now
+            var mapDiv = document.getElementById('map');
+            mapDiv.innerHTML = `<p>Route from ${startLocation} to ${destination}</p>`;
+        }
+    </script>
+</body>
+</html>
